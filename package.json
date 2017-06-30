@@ -2,9 +2,10 @@
   "name": "switch_notify",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "switch.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dryrun": "$(npm bin)/lambda-local -l switch.js -h check -e event-samples/test.json"
   },
   "keywords": [],
   "author": "",
