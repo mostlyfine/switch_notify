@@ -1,0 +1,3 @@
+*.swp
+.node-version
+node_modules/
