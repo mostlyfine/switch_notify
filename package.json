@@ -5,10 +5,11 @@
   "main": "switch.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dryrun": "$(npm bin)/lambda-local -l switch.js -h check -e event-samples/test.json"
+    "dryrun": "$(npm bin)/lambda-local -l switch.js -h check -e event-samples/test.json",
+    "deploy": "$(npm bin)/sls deploy"
   },
   "keywords": [],
-  "author": "",
+  "author": "mostlyfine",
   "license": "ISC",
   "dependencies": {
     "cheerio-httpcli": "^0.7.0"
