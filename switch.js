@@ -11,7 +11,7 @@ module.exports.check = (event, context, callback) => {
       $('.items').each(function(i) {
         var stock = $(this).text().split('/');
         if (stock[0] == 'HAC_S_KAYAA' && stock[1] != '-') {
-          ifttt.notify(proces.env.MESSAGE);
+          ifttt.notify(process.env.MESSAGE);
           callback(null, stock[1]);
         }
       });
