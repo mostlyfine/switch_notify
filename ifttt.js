@@ -22,7 +22,6 @@ module.exports = {
       res.on('data', function(str) {
         console.log(str);
       });
-      context.succeed(res.statusCode);
     }).write(body);
   }
 };
