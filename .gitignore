@@ -1,5 +1,8 @@
 *.swp
+*.log
 .envrc
 .node-version
+.python-version
+.serverless/
 node_modules/
 event-samples/
