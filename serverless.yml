@@ -1,22 +1,21 @@
 service: SwitchCheckService
+
 provider:
     name: aws
-    runtime: node4.3
-    iamRoleStatements:
-      - Efect: Allow
-        Action:
-          - cloudwatch: *
-        Resource: '*'
+    runtime: nodejs4.3
+    stage: prod
+    region: ap-northeast-1
+
 package:
   exclude:
-    - jsconfig.json
     - event-samples
     - package.json
     - node_modules/**
     - '!node_modules/aws-sdk/**'
+    - '!node_modules/cheerio-httpcli/**'
 
 functions:
   switchCheckFunction:
     handler: switch.check
     events:
-      - schedule: cron(0/10 * * * ? *)
+      - schedule: cron(0/1 10-18 * * ? *)
